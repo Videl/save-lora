@@ -32,8 +32,14 @@ class JoinRequestPacketDecoder {
      * Be careful : this.payload will be UNDEFINED when PHYPayload does not exist.
      */
     isSupported() {
-        // TODO Step 2.1
-        return false;
+        console.log(this.payload);
+        if (this.payload) {
+            if (this.payload.length === 23) {
+                return true;
+            }
+        } else {
+            return false;
+        }
     }
 
     /**

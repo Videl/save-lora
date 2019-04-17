@@ -22,12 +22,28 @@ const conf = require('../../conf');
  */
 const getConnectedMqttClient = () => {
 
-    let client;
 
-    // TODO
+
     // You need to create the client (and connect to it)
     // (don't forget to take a look at your conf.js
     // and provide ALL credentials and clientId to connect
+
+    let client = mqtt.connect(conf.mqtt.host, {
+        clientId: conf.mqtt.clientId,
+        username: conf.mqtt.username,
+        password: conf.mqtt.password,
+        clean: true
+    });
+
+    client.on('connect', () => {
+        client.subscribe('#')
+    })
+
+    client.on('message', (topic, message) => {
+        //console.log(`${topic} ; ${message}` );
+    })
+
+
 
     return client;
 };

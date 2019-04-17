@@ -4,8 +4,8 @@
  * @type {{}}
  */
 const CHANGEME = {
-    clientId: 'change-me',
-    deviceEUI: '13:37:00:00:FF:FF:FF:FF'
+    clientId: 'cdcg',
+    deviceEUI: '13:37:00:00:5B:FA:0F:FD'
 };
 
 module.exports = {

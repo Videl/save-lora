@@ -5,7 +5,7 @@
   "scripts": {
     "watch": "node ./node_modules/nodemon/bin/nodemon ./src/index.js",
     "start": "node ./src/index.js",
-    "test": "./node_modules/jest/bin/jest.js src"
+    "test": "node_modules/jest/bin/jest.js src"
   },
   "author": "Resourcepool",
   "license": "Apache-2.0",
