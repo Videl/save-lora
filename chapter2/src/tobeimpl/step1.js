@@ -20,21 +20,21 @@ let serialComService = require("../serial-com");
  */
 
 const setModeLoraWan = () => {
-    serialComService.sendCommand("CHANGEME");
+    serialComService.sendCommand("at+mode=0"); // SET LoraWan work mode
 };
 
 const setAppEui = () => {
     const appEUI = conf.appEUI;
-    serialComService.sendCommand("CHANGEME");
+    serialComService.sendCommand("at+set_config=app_eui:" + appEUI);
 };
 
 const setAppKey = () => {
     const appKey = conf.appKey;
-    serialComService.sendCommand("CHANGEME");
+    serialComService.sendCommand("at+set_config=app_key:" + appKey);
 };
 
 const sendJoinRequest = () => {
-    serialComService.sendCommand("CHANGEME");
+    serialComService.sendCommand("at+join=otaa");
 };
 
 
