@@ -35,7 +35,13 @@ class JoinRequestPacketDecoder {
         console.log(this.payload);
         if (this.payload) {
             if (this.payload.length === 23) {
-                return true;
+                var sliced = this.payload.slice(0, 3);
+                if (sliced[0] == 0)
+                    return true;
+                else 
+                    return false;
+            } else {
+                return false;
             }
         } else {
             return false;
